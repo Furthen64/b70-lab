@@ -210,6 +210,38 @@
         "INK_DOWNQ8": "0"
       },
       "profiling": true
+    },
+    {
+      "id": "g31-bench-fast-kv8-downq8-on",
+      "model": "Inkling-2-Mini",
+      "quantization": "UD-Q4_K_XL",
+      "backend": "SYCL",
+      "commit": null,
+      "hardware_profile": "b70-2026-11-24",
+      "graph": false,
+      "flash_attention": "custom",
+      "kv_cache": {
+        "bits": 8
+      },
+      "context_capacity": 4096,
+      "batch": null,
+      "microbatch": null,
+      "prefill_chunk": null,
+      "speculation": false,
+      "build": {
+        "aot": true,
+        "target": "bmg_g31",
+        "compiler": "IntelLLVM 2026.2.0",
+        "gcc_toolchain": 15,
+        "reference_tests": false
+      },
+      "notes": "Unprofiled fast/direct benchmark. Settings inferred from immediately preceding recommended command; user provided output without command echo. GUR enabled but NVFP4R/Q8_0R not eligible.",
+      "environment": {
+        "INK_KV": "8",
+        "INK_DOWNQ8": "1",
+        "INK_GUR": "1"
+      },
+      "profiling": false
     }
   ]
 }
