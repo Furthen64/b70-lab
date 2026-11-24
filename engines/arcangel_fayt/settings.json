@@ -242,6 +242,38 @@
         "INK_GUR": "1"
       },
       "profiling": false
+    },
+    {
+      "id": "g31-bench-fast-kv8-downq8-off",
+      "model": "Inkling-2-Mini",
+      "quantization": "UD-Q4_K_XL",
+      "backend": "SYCL",
+      "commit": null,
+      "hardware_profile": "b70-2026-11-24",
+      "graph": false,
+      "flash_attention": "custom",
+      "kv_cache": {
+        "bits": 8
+      },
+      "context_capacity": 4096,
+      "batch": null,
+      "microbatch": null,
+      "prefill_chunk": null,
+      "speculation": false,
+      "build": {
+        "aot": true,
+        "target": "bmg_g31",
+        "compiler": "IntelLLVM 2026.2.0",
+        "gcc_toolchain": 15,
+        "reference_tests": false
+      },
+      "notes": "Exact user-reported invocation: INK_KV=8 INK_DOWNQ8=0 INK_GUR=1 ./build-b70/bench-decode MODEL 2048 4096 fast. Unprofiled fast/direct mode.",
+      "environment": {
+        "INK_KV": "8",
+        "INK_DOWNQ8": "0",
+        "INK_GUR": "1"
+      },
+      "profiling": false
     }
   ]
 }
