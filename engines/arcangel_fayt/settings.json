@@ -118,6 +118,36 @@
       "server_default_reasoning_effort": "low",
       "request_temperature": null,
       "request_reasoning_effort": null
+    },
+    {
+      "id": "g31-bench-profile-kv8",
+      "model": "Inkling-2-Mini",
+      "quantization": "UD-Q4_K_XL",
+      "backend": "SYCL",
+      "commit": null,
+      "hardware_profile": "b70-2026-11-24",
+      "graph": false,
+      "flash_attention": "custom",
+      "kv_cache": {
+        "bits": 8
+      },
+      "context_capacity": 4096,
+      "batch": null,
+      "microbatch": null,
+      "prefill_chunk": null,
+      "speculation": false,
+      "build": {
+        "aot": true,
+        "target": "bmg_g31",
+        "compiler": "IntelLLVM 2026.2.0",
+        "gcc_toolchain": 15,
+        "reference_tests": false
+      },
+      "notes": "Profile mode selects fast/direct execution with profiling queue. 4096 capacity, start position 0, 32 timed tokens plus 3 warmup; event aggregates include all 35 tokens. Other environment overrides not independently checked.",
+      "environment": {
+        "INK_KV": "8"
+      },
+      "profiling": true
     }
   ]
 }
