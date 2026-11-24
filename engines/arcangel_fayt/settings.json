@@ -83,6 +83,41 @@
       },
       "python": "3.14.4",
       "notes": "Manual server launch using uv; tokenizer and chat template hashes matched upstream installer."
+    },
+    {
+      "id": "g31-server-64k-opencode",
+      "model": "Inkling-2-Mini",
+      "quantization": "UD-Q4_K_XL",
+      "backend": "SYCL",
+      "commit": null,
+      "hardware_profile": "b70-2026-11-24",
+      "graph": true,
+      "flash_attention": "custom",
+      "kv_cache": {
+        "bits": 8
+      },
+      "context_capacity": 65536,
+      "batch": null,
+      "microbatch": null,
+      "prefill_chunk": 256,
+      "speculation": false,
+      "cpu_expert_offload": false,
+      "stash_ram_gb": 0,
+      "build": {
+        "aot": true,
+        "target": "bmg_g31",
+        "compiler": "IntelLLVM 2026.2.0",
+        "gcc_toolchain": 15,
+        "reference_tests": false
+      },
+      "python": "3.14.4",
+      "notes": "Same launch configuration as 8k baseline except context capacity, alias and network endpoint, per conversation. Server log confirms 65536 context, 8-bit KV and chunk 256. Graph and other inherited settings not independently rechecked. OpenCode configured context limit not verified. Idle VRAM reported as 18.15 GB; engine startup 12.7 s.",
+      "model_alias": "qwen",
+      "api_port": 8080,
+      "server_default_temperature": 1,
+      "server_default_reasoning_effort": "low",
+      "request_temperature": null,
+      "request_reasoning_effort": null
     }
   ]
 }
