@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "profiles": {
+    "b70-2026-11-24": {
+      "gpu": "Intel Arc Pro B70",
+      "architecture": "Battlemage G31",
+      "pci_id": "8086:e223",
+      "vram_gb": 32,
+      "cpu": "AMD Ryzen 5 9600",
+      "system_ram_gb": 16,
+      "os": "Ubuntu 26.04.1 LTS",
+      "kernel": "7.0.0-44-generic",
+      "mesa": "26.0.3-1ubuntu1",
+      "intel_compute_runtime": "25.40.35563.10",
+      "oneapi": "2026.2.0",
+      "ocloc": "25.40.1",
+      "gcc": "15.2.0",
+      "notes": "Current investigation environment. Historical tests may have used earlier software versions; do not assign this profile retrospectively without evidence."
+    }
+  }
+}

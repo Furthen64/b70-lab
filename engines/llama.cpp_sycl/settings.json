@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "checkout": "llama.cpp_sycl",
+    "backend": "SYCL"
+  },
+  "settings": [
+    {
+      "id": "qwen-fp32",
+      "model": "Qwen3.8-27B",
+      "quantization": "Q6_K",
+      "backend": "SYCL",
+      "commit": "29b52d398",
+      "hardware_profile": null,
+      "graph": null,
+      "flash_attention": true,
+      "kv_cache": {
+        "k": "q8_0",
+        "v": "q8_0"
+      },
+      "context_capacity": null,
+      "batch": null,
+      "microbatch": null,
+      "prefill_chunk": null,
+      "speculation": null,
+      "gpu_layers": 99,
+      "fp16": false
+    },
+    {
+      "id": "qwen-fp16-ub512",
+      "model": "Qwen3.8-27B",
+      "quantization": "Q6_K",
+      "backend": "SYCL",
+      "commit": null,
+      "hardware_profile": null,
+      "graph": null,
+      "flash_attention": true,
+      "kv_cache": {
+        "k": "q8_0",
+        "v": "q8_0"
+      },
+      "context_capacity": null,
+      "batch": null,
+      "microbatch": 512,
+      "prefill_chunk": null,
+      "speculation": null,
+      "fp16": true
+    },
+    {
+      "id": "qwen-fp16-b2048-ub1024",
+      "model": "Qwen3.8-27B",
+      "quantization": "Q6_K",
+      "backend": "SYCL",
+      "commit": null,
+      "hardware_profile": null,
+      "graph": null,
+      "flash_attention": true,
+      "kv_cache": {
+        "k": "q8_0",
+        "v": "q8_0"
+      },
+      "context_capacity": null,
+      "batch": 2048,
+      "microbatch": 1024,
+      "prefill_chunk": null,
+      "speculation": null,
+      "fp16": true
+    },
+    {
+      "id": "qwen-fp16-b4096-ub2048",
+      "model": "Qwen3.8-27B",
+      "quantization": "Q6_K",
+      "backend": "SYCL",
+      "commit": null,
+      "hardware_profile": null,
+      "graph": null,
+      "flash_attention": true,
+      "kv_cache": {
+        "k": "q8_0",
+        "v": "q8_0"
+      },
+      "context_capacity": null,
+      "batch": 4096,
+      "microbatch": 2048,
+      "prefill_chunk": null,
+      "speculation": null,
+      "fp16": true
+    },
+    {
+      "id": "qwen-fp16-decode",
+      "model": "Qwen3.8-27B",
+      "quantization": "Q6_K",
+      "backend": "SYCL",
+      "commit": null,
+      "hardware_profile": null,
+      "graph": null,
+      "flash_attention": true,
+      "kv_cache": null,
+      "context_capacity": null,
+      "batch": null,
+      "microbatch": null,
+      "prefill_chunk": null,
+      "speculation": null,
+      "fp16": true
+    },
+    {
+      "id": "qwen-opencode",
+      "model": "Qwen3.8-27B",
+      "quantization": "Q6_K",
+      "backend": "SYCL",
+      "commit": null,
+      "hardware_profile": null,
+      "graph": null,
+      "flash_attention": null,
+      "kv_cache": null,
+      "context_capacity": null,
+      "batch": null,
+      "microbatch": null,
+      "prefill_chunk": null,
+      "speculation": null
+    }
+  ]
+}

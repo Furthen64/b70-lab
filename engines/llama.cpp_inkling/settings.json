@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "checkout": "llama.cpp_inkling",
+    "backend": "SYCL",
+    "upstream_commit": "c212d25ad",
+    "notes": "Local patches for MKL attention sinks and SYCL size_t ID range. Exact local commit not established."
+  },
+  "settings": [
+    {
+      "id": "inkling-patched",
+      "model": "Inkling-2-Mini",
+      "quantization": "UD-Q4_K_XL",
+      "backend": "SYCL",
+      "commit": null,
+      "hardware_profile": null,
+      "graph": false,
+      "flash_attention": null,
+      "kv_cache": null,
+      "context_capacity": null,
+      "batch": null,
+      "microbatch": null,
+      "prefill_chunk": null,
+      "speculation": null,
+      "notes": "Patched SYCL build; exact benchmark KV and FA settings unknown."
+    },
+    {
+      "id": "inkling-grouped",
+      "model": "Inkling-2-Mini",
+      "quantization": "UD-Q4_K_XL",
+      "backend": "SYCL",
+      "commit": null,
+      "hardware_profile": null,
+      "graph": false,
+      "flash_attention": null,
+      "kv_cache": null,
+      "context_capacity": null,
+      "batch": null,
+      "microbatch": null,
+      "prefill_chunk": null,
+      "speculation": null,
+      "environment": {
+        "GGML_SYCL_NVFP4_GROUPED": "1"
+      },
+      "notes": "Opt-in prototype; not default. Logit NMSE 0.00336 and top-10 order changed in historical comparison."
+    }
+  ]
+}

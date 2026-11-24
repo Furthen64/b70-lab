@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "checkout": "llama.cpp_vulkan",
+    "backend": "Vulkan",
+    "upstream_commit": "c212d25ad"
+  },
+  "settings": [
+    {
+      "id": "inkling-vulkan",
+      "model": "Inkling-2-Mini",
+      "quantization": "UD-Q4_K_XL",
+      "backend": "Vulkan",
+      "commit": "c212d25ad",
+      "hardware_profile": null,
+      "graph": null,
+      "flash_attention": null,
+      "kv_cache": null,
+      "context_capacity": null,
+      "batch": null,
+      "microbatch": null,
+      "prefill_chunk": null,
+      "speculation": null,
+      "notes": "Clean upstream build; exact benchmark KV and FA settings unknown."
+    },
+    {
+      "id": "inkling-vulkan-ub512",
+      "model": "Inkling-2-Mini",
+      "quantization": "UD-Q4_K_XL",
+      "backend": "Vulkan",
+      "commit": "c212d25ad",
+      "hardware_profile": null,
+      "graph": null,
+      "flash_attention": null,
+      "kv_cache": null,
+      "context_capacity": null,
+      "batch": 4096,
+      "microbatch": 512,
+      "prefill_chunk": null,
+      "speculation": null
+    },
+    {
+      "id": "inkling-vulkan-ub1024",
+      "model": "Inkling-2-Mini",
+      "quantization": "UD-Q4_K_XL",
+      "backend": "Vulkan",
+      "commit": "c212d25ad",
+      "hardware_profile": null,
+      "graph": null,
+      "flash_attention": null,
+      "kv_cache": null,
+      "context_capacity": null,
+      "batch": 4096,
+      "microbatch": 1024,
+      "prefill_chunk": null,
+      "speculation": null
+    },
+    {
+      "id": "inkling-vulkan-ub2048",
+      "model": "Inkling-2-Mini",
+      "quantization": "UD-Q4_K_XL",
+      "backend": "Vulkan",
+      "commit": "c212d25ad",
+      "hardware_profile": null,
+      "graph": null,
+      "flash_attention": null,
+      "kv_cache": null,
+      "context_capacity": null,
+      "batch": 4096,
+      "microbatch": 2048,
+      "prefill_chunk": null,
+      "speculation": null
+    },
+    {
+      "id": "inkling-vulkan-ub4096",
+      "model": "Inkling-2-Mini",
+      "quantization": "UD-Q4_K_XL",
+      "backend": "Vulkan",
+      "commit": "c212d25ad",
+      "hardware_profile": null,
+      "graph": null,
+      "flash_attention": null,
+      "kv_cache": null,
+      "context_capacity": null,
+      "batch": 4096,
+      "microbatch": 4096,
+      "prefill_chunk": null,
+      "speculation": null
+    }
+  ]
+}

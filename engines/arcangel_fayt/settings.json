@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "checkout": "arcangel_fayt",
+    "upstream": "https://github.com/itstxl/arcangel",
+    "backend": "SYCL",
+    "notes": "Original developer tested B580 G21 12 GB with UD-Q2_K_XL. G31 build uses 32 GB B70; upstream 512k profile is an estimate, not measured here."
+  },
+  "settings": [
+    {
+      "id": "g31-bench-graph",
+      "model": "Inkling-2-Mini",
+      "quantization": "UD-Q4_K_XL",
+      "backend": "SYCL",
+      "commit": null,
+      "hardware_profile": "b70-2026-11-24",
+      "graph": true,
+      "flash_attention": "custom",
+      "kv_cache": null,
+      "context_capacity": 4096,
+      "batch": null,
+      "microbatch": null,
+      "prefill_chunk": null,
+      "speculation": false,
+      "build": {
+        "aot": true,
+        "target": "bmg_g31",
+        "compiler": "IntelLLVM 2026.2.0",
+        "gcc_toolchain": 15,
+        "reference_tests": false
+      },
+      "notes": "Synthetic benchmark default KV precision not verified; eight fixed repeating token IDs, three warmup calls, full synchronized logits transfer."
+    },
+    {
+      "id": "g31-bench-fast",
+      "model": "Inkling-2-Mini",
+      "quantization": "UD-Q4_K_XL",
+      "backend": "SYCL",
+      "commit": null,
+      "hardware_profile": "b70-2026-11-24",
+      "graph": false,
+      "flash_attention": "custom",
+      "kv_cache": null,
+      "context_capacity": 4096,
+      "batch": null,
+      "microbatch": null,
+      "prefill_chunk": null,
+      "speculation": false,
+      "build": {
+        "aot": true,
+        "target": "bmg_g31",
+        "compiler": "IntelLLVM 2026.2.0",
+        "gcc_toolchain": 15,
+        "reference_tests": false
+      },
+      "notes": "Synthetic benchmark default KV precision not verified; eight fixed repeating token IDs, three warmup calls, full synchronized logits transfer."
+    },
+    {
+      "id": "g31-server-8k",
+      "model": "Inkling-2-Mini",
+      "quantization": "UD-Q4_K_XL",
+      "backend": "SYCL",
+      "commit": null,
+      "hardware_profile": "b70-2026-11-24",
+      "graph": true,
+      "flash_attention": "custom",
+      "kv_cache": {
+        "bits": 8
+      },
+      "context_capacity": 8192,
+      "batch": null,
+      "microbatch": null,
+      "prefill_chunk": 256,
+      "speculation": false,
+      "cpu_expert_offload": false,
+      "stash_ram_gb": 0,
+      "build": {
+        "aot": true,
+        "target": "bmg_g31",
+        "compiler": "IntelLLVM 2026.2.0",
+        "gcc_toolchain": 15,
+        "reference_tests": false
+      },
+      "python": "3.14.4",
+      "notes": "Manual server launch using uv; tokenizer and chat template hashes matched upstream installer."
+    }
+  ]
+}
