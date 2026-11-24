@@ -148,6 +148,37 @@
         "INK_KV": "8"
       },
       "profiling": true
+    },
+    {
+      "id": "g31-bench-profile-kv8-gur-off",
+      "model": "Inkling-2-Mini",
+      "quantization": "UD-Q4_K_XL",
+      "backend": "SYCL",
+      "commit": null,
+      "hardware_profile": "b70-2026-11-24",
+      "graph": false,
+      "flash_attention": "custom",
+      "kv_cache": {
+        "bits": 8
+      },
+      "context_capacity": 4096,
+      "batch": null,
+      "microbatch": null,
+      "prefill_chunk": null,
+      "speculation": false,
+      "build": {
+        "aot": true,
+        "target": "bmg_g31",
+        "compiler": "IntelLLVM 2026.2.0",
+        "gcc_toolchain": 15,
+        "reference_tests": false
+      },
+      "notes": "Same profiling invocation as g31-bench-profile-kv8 except runtime INK_GUR=0, per reported experiment. Compile-time GR remains 4. Actual grouped versus fallback kernel selection not instrumented; profile labels do not distinguish them.",
+      "environment": {
+        "INK_KV": "8",
+        "INK_GUR": "0"
+      },
+      "profiling": true
     }
   ]
 }
