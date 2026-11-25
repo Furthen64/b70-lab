@@ -334,6 +334,44 @@
         "cpu_expert_layers": 0,
         "offload": "none"
       }
+    },
+    {
+      "id": "g31-server-256k-opencode-arcangel",
+      "model": "Inkling-2-Mini",
+      "quantization": "UD-Q4_K_XL",
+      "backend": "SYCL",
+      "commit": null,
+      "hardware_profile": "b70-2026-11-24",
+      "graph": true,
+      "flash_attention": "custom",
+      "kv_cache": {
+        "bits": 8
+      },
+      "context_capacity": 262144,
+      "batch": null,
+      "microbatch": null,
+      "prefill_chunk": 256,
+      "speculation": false,
+      "cpu_expert_offload": false,
+      "stash_ram_gb": 0,
+      "build": {
+        "aot": true,
+        "target": "bmg_g31",
+        "compiler": "IntelLLVM 2026.2.0",
+        "gcc_toolchain": 15,
+        "reference_tests": false
+      },
+      "python": "3.14.4",
+      "notes": "Server launch output confirms capacity 262144, KV8, chunk256, vocab200058, startup12.8s. User launch script stash0, no INK_KV/INK_OFFLOAD override; additional explicit tuning exports suggested but not independently confirmed. Graph/default engine options inherited, not independently checked. OpenCode model listing and screenshot confirm alias arcangel and approximately 256k context capacity. Client output allowance 30000 configured; effective server output limit unverified. No server VRAM measurement for this run; do not substitute synthetic benchmark telemetry.",
+      "model_alias": "arcangel",
+      "api_port": 8080,
+      "server_default_temperature": 1,
+      "server_default_reasoning_effort": "low",
+      "request_temperature": null,
+      "request_reasoning_effort": null,
+      "opencode_version": "1.19.6",
+      "client_context_limit": 262144,
+      "client_output_limit": 30000
     }
   ]
 }
