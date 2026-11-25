@@ -274,6 +274,66 @@
         "INK_GUR": "1"
       },
       "profiling": false
+    },
+    {
+      "id": "g31-context-256k-kv8-graph-seed1",
+      "model": "Inkling-2-Mini",
+      "quantization": "UD-Q4_K_XL",
+      "backend": "SYCL",
+      "commit": null,
+      "hardware_profile": "b70-2026-11-24",
+      "graph": true,
+      "flash_attention": "custom",
+      "kv_cache": {
+        "bits": 8
+      },
+      "context_capacity": 262656,
+      "batch": null,
+      "microbatch": null,
+      "prefill_chunk": 256,
+      "speculation": false,
+      "build": {
+        "aot": true,
+        "target": "bmg_g31",
+        "compiler": "IntelLLVM 2026.2.0",
+        "gcc_toolchain": 15,
+        "reference_tests": false,
+        "reported_identity": "e8ed1e3fd456-dirty",
+        "reported_compiler": "Intel(R) oneAPI DPC++/C++ Compiler 2026.2.0 (2026.2.0.20261001)"
+      },
+      "notes": "Configuration confirmed by console output from testrun1.sh; progressive populated context, no empty-cache jumps. Build identity dirty, exact source snapshot not established. Device Intel(R) Graphics [0xe223]. Independent numerical correctness unverified; basic finite logits and valid token checks only. Environment values reflect preceding invocation and effective configuration; compiler settings inherited from earlier build.",
+      "graph_active": true,
+      "profiling": false,
+      "cpu_expert_offload": false,
+      "environment": {
+        "INK_DOWNQ8": "1",
+        "INK_GUR": "1",
+        "INK_KV": "8",
+        "INK_XMX": "1"
+      },
+      "benchmark": {
+        "tool": "bench-context",
+        "checkpoints": [
+          2048,
+          16384,
+          43008,
+          65536,
+          131072,
+          196608,
+          262144
+        ],
+        "decode_tokens": 512,
+        "seed": 1,
+        "corpus": null,
+        "input_policy": "teacher_forced",
+        "warmup_prefill_tokens": 1,
+        "warmup_decode_tokens": 3,
+        "swa_chunk": 64,
+        "stage_tabs": false,
+        "xmx_prefill": true,
+        "cpu_expert_layers": 0,
+        "offload": "none"
+      }
     }
   ]
 }
