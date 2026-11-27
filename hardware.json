@@ -1,5 +1,6 @@
 {
   "schema_version": 1,
+  "latest_updated": "2026-11-27T23:13:37Z",
   "profiles": {
     "b70-2026-11-24": {
       "gpu": "Intel Arc Pro B70",
