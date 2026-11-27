@@ -1,7 +1,7 @@
 {
   "experiment_id": "electrow-task-12-2026-11-27",
   "date": "2026-11-27",
-  "status": "stop_requested_cloud_budget",
+  "status": "conductor_stopped_worker_continuing",
   "project": "Electrow",
   "task": {
     "path": "Tasks/12-component-palette-and-properties.md",
@@ -390,37 +390,154 @@
         "decode_tps": 42.54,
         "request_elapsed_seconds": 10.688,
         "finish_reason": "tool_calls"
+      },
+      {
+        "request_id": 109,
+        "started_at": null,
+        "prefill_completed_at": "2026-11-27T23:52:41.722+01:00",
+        "completed_at": "2026-11-27T23:53:15.793+01:00",
+        "prompt_tokens": 215511,
+        "new_tokens": 246,
+        "prefill_seconds": 0.9,
+        "generated_tokens": 1262,
+        "decode_tps": 37.04,
+        "request_elapsed_seconds": 34.976,
+        "finish_reason": "tool_calls"
+      },
+      {
+        "request_id": 110,
+        "started_at": "2026-11-27T23:53:44.354+01:00",
+        "prefill_completed_at": "2026-11-27T23:53:46.807+01:00",
+        "completed_at": "2026-11-27T23:53:54.501+01:00",
+        "prompt_tokens": 217325,
+        "new_tokens": 553,
+        "prefill_seconds": 2.26,
+        "generated_tokens": 288,
+        "decode_tps": 37.43,
+        "request_elapsed_seconds": 9.954,
+        "finish_reason": "tool_calls"
+      },
+      {
+        "request_id": 111,
+        "started_at": "2026-11-27T23:53:54.765+01:00",
+        "prefill_completed_at": "2026-11-27T23:53:55.579+01:00",
+        "completed_at": "2026-11-27T23:53:57.567+01:00",
+        "prompt_tokens": 217619,
+        "new_tokens": 7,
+        "prefill_seconds": 0.63,
+        "generated_tokens": 75,
+        "decode_tps": 37.72,
+        "request_elapsed_seconds": 2.619,
+        "finish_reason": "tool_calls"
+      },
+      {
+        "request_id": 112,
+        "started_at": "2026-11-27T23:54:26.076+01:00",
+        "prefill_completed_at": "2026-11-27T23:54:27.932+01:00",
+        "completed_at": "2026-11-27T23:55:27.881+01:00",
+        "prompt_tokens": 218173,
+        "new_tokens": 480,
+        "prefill_seconds": 1.66,
+        "generated_tokens": 2212,
+        "decode_tps": 36.9,
+        "request_elapsed_seconds": 61.61,
+        "finish_reason": "tool_calls"
+      },
+      {
+        "request_id": 113,
+        "started_at": "2026-11-27T23:55:28.174+01:00",
+        "prefill_completed_at": "2026-11-27T23:55:35.663+01:00",
+        "completed_at": "2026-11-27T23:56:04.263+01:00",
+        "prompt_tokens": 220391,
+        "new_tokens": 2218,
+        "prefill_seconds": 7.3,
+        "generated_tokens": 1053,
+        "decode_tps": 36.82,
+        "request_elapsed_seconds": 35.902,
+        "finish_reason": "tool_calls"
+      },
+      {
+        "request_id": 114,
+        "started_at": "2026-11-27T23:56:05.239+01:00",
+        "prefill_completed_at": "2026-11-27T23:56:06.359+01:00",
+        "completed_at": "2026-11-27T23:56:45.932+01:00",
+        "prompt_tokens": 221695,
+        "new_tokens": 252,
+        "prefill_seconds": 0.92,
+        "generated_tokens": 1452,
+        "decode_tps": 36.69,
+        "request_elapsed_seconds": 40.497,
+        "finish_reason": "tool_calls"
+      },
+      {
+        "request_id": 115,
+        "started_at": "2026-11-27T23:56:46.195+01:00",
+        "prefill_completed_at": "2026-11-27T23:56:47.021+01:00",
+        "completed_at": "2026-11-27T23:56:49.043+01:00",
+        "prompt_tokens": 223153,
+        "new_tokens": 7,
+        "prefill_seconds": 0.64,
+        "generated_tokens": 75,
+        "decode_tps": 37.09,
+        "request_elapsed_seconds": 2.659,
+        "finish_reason": "tool_calls"
+      },
+      {
+        "request_id": 116,
+        "started_at": "2026-11-27T23:57:23.659+01:00",
+        "prefill_completed_at": "2026-11-27T23:57:25.589+01:00",
+        "completed_at": "2026-11-27T23:58:16.243+01:00",
+        "prompt_tokens": 223738,
+        "new_tokens": 511,
+        "prefill_seconds": 1.73,
+        "generated_tokens": 1848,
+        "decode_tps": 36.48,
+        "request_elapsed_seconds": 52.382,
+        "finish_reason": "tool_calls"
+      },
+      {
+        "request_id": 117,
+        "started_at": "2026-11-27T23:58:54.403+01:00",
+        "prefill_completed_at": "2026-11-27T23:58:56.882+01:00",
+        "completed_at": "2026-11-27T23:59:32.284+01:00",
+        "prompt_tokens": 226113,
+        "new_tokens": 528,
+        "prefill_seconds": 2.27,
+        "generated_tokens": 1294,
+        "decode_tps": 36.55,
+        "request_elapsed_seconds": 37.676,
+        "finish_reason": "tool_calls"
       }
     ],
     "pending_request": {
-      "request_id": 80,
-      "started_at": "2026-11-27T23:30:46.926+01:00",
-      "prefill_completed_at": "2026-11-27T23:30:48.978+01:00",
-      "prompt_tokens": 154481,
-      "new_tokens": 609,
-      "prefill_seconds": 1.93,
+      "request_id": 118,
+      "started_at": "2026-11-28T00:00:10.305+01:00",
+      "prefill_completed_at": null,
+      "prompt_tokens": null,
+      "new_tokens": null,
+      "prefill_seconds": null,
       "generated_tokens": null,
       "decode_tps": null,
       "finish_reason": null,
-      "notes": "Latest supplied backend line; no completion available."
+      "notes": "Only request start supplied."
     },
     "summary": {
-      "completed_requests": 26,
-      "generated_tokens": 29295,
-      "estimated_decode_seconds": 661.6731885049126,
-      "weighted_decode_tps": 44.27412279798383,
-      "prefill_seconds": 25.85,
-      "request_elapsed_seconds": 687.497,
-      "cumulative_prompt_tokens": 3428988,
-      "new_prompt_tokens": 6540,
-      "inferred_reused_tokens": 3422448,
-      "inferred_reused_fraction": 0.9980927317330944,
-      "min_decode_tps": 42.14,
+      "completed_requests": 35,
+      "generated_tokens": 38854,
+      "estimated_decode_seconds": 921.6299238159108,
+      "weighted_decode_tps": 42.157919351326115,
+      "prefill_seconds": 44.16,
+      "request_elapsed_seconds": 965.7719999999999,
+      "cumulative_prompt_tokens": 5412706,
+      "new_prompt_tokens": 11342,
+      "inferred_reused_tokens": 5401364,
+      "inferred_reused_fraction": 0.9979045601220535,
+      "min_decode_tps": 36.48,
       "max_decode_tps": 46.27,
-      "latest_completed_decode_tps": 42.54,
-      "tool_call_finishes": 26,
-      "latest_reported_prompt_tokens": 154481,
-      "notes": "Completed requests 45–57 and 67–79 only. Requests 1–44 and 59–66 not supplied; request 58 has prefill only and unknown final status. Request 80 has prefill only. No full-session token totals. Decode seconds estimated from rounded rates; prefix reuse inferred from logged prompt minus new."
+      "latest_completed_decode_tps": 36.55,
+      "tool_call_finishes": 35,
+      "latest_reported_prompt_tokens": 226113,
+      "notes": "Completed requests 45–57, 67–79 and 109–117 only. Requests 1–44, 59–66 and 81–108 absent. Requests 58 and 80 have prefill only and unknown final status. Request 118 start only. No full-session totals. Decode duration estimated from rounded rates; prefix reuse inferred."
     },
     "incomplete_requests": [
       {
@@ -434,6 +551,18 @@
         "decode_tps": null,
         "finish_reason": null,
         "notes": "Only prefill observed; completion not provided in later excerpt. Final status unknown."
+      },
+      {
+        "request_id": 80,
+        "started_at": "2026-11-27T23:30:46.926+01:00",
+        "prefill_completed_at": "2026-11-27T23:30:48.978+01:00",
+        "prompt_tokens": 154481,
+        "new_tokens": 609,
+        "prefill_seconds": 1.93,
+        "generated_tokens": null,
+        "decode_tps": null,
+        "finish_reason": null,
+        "notes": "Only prefill observed in supplied excerpt; final status unknown."
       }
     ]
   },
@@ -446,7 +575,8 @@
       "Human clarified manual reproduction confirmed a defect already known to conductor, rather than discovering a new defect. Interaction experiment was useful for understanding coordination but redundant for defect discovery.",
       "Concurrent conductor verification during corrective review 1: Codex reports worker removed shadowing assignment. Independent check constructed editor and drew all three multi-terminal symbols without throwing. Subsequent Chrome check loaded editor without uncaught JavaScript errors and divider midpoint reached 5 V. Initial browser test attempt failed with local bind/permission error; user approved rerun, which succeeded. User reports GPU still active and ability to interact with Codex while Inkling continues remaining fixes. This is partial verification on a changing working tree, not final task acceptance.",
       "User saved proposed hypothesis-driven research coordination workflow locally in Electrow under FutureCoordination. No implementation of that workflow claimed.",
-      "User set 70% remaining five-hour allowance as pain limit and requested stopping Sol trial. Partial regression fixes verified by conductor earlier; final Task 12 acceptance remains unverified. Preserve work for potential cheaper-conductor handover."
+      "User set 70% remaining five-hour allowance as pain limit and requested stopping Sol trial. Partial regression fixes verified by conductor earlier; final Task 12 acceptance remains unverified. Preserve work for potential cheaper-conductor handover.",
+      "User stopped Codex at quota threshold and deliberately allowed Inkling to continue the existing corrective work. Exact interruption timestamp unavailable; cannot classify every request in latest excerpt as post-interruption. User requests visibility into worker activity. Earlier corrective command used tee to Temp/task-12-worker-review-1.jsonl; actual revised command log path and continued log writing not yet verified."
     ],
     "confirmed_defects": null,
     "corrective_cycles": null,
@@ -738,8 +868,8 @@
     "reason": "cloud allowance threshold",
     "five_hour_remaining_percent": 70,
     "user_requested": true,
-    "conductor_interruption_confirmed": null,
-    "worker_termination_confirmed": null,
+    "conductor_interruption_confirmed": true,
+    "worker_termination_confirmed": false,
     "task_acceptance": null
   }
 }
