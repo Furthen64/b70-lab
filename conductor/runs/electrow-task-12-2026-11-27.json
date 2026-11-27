@@ -1,7 +1,7 @@
 {
   "experiment_id": "electrow-task-12-2026-11-27",
   "date": "2026-11-27",
-  "status": "in_progress_at_last_report",
+  "status": "stop_requested_cloud_budget",
   "project": "Electrow",
   "task": {
     "path": "Tasks/12-component-palette-and-properties.md",
@@ -445,7 +445,8 @@
       "Human interactive testing contributed new diagnostic evidence before first corrective dispatch. Conductor adapted its assignment after user declined initial permission. Worker then resumed according to user report.",
       "Human clarified manual reproduction confirmed a defect already known to conductor, rather than discovering a new defect. Interaction experiment was useful for understanding coordination but redundant for defect discovery.",
       "Concurrent conductor verification during corrective review 1: Codex reports worker removed shadowing assignment. Independent check constructed editor and drew all three multi-terminal symbols without throwing. Subsequent Chrome check loaded editor without uncaught JavaScript errors and divider midpoint reached 5 V. Initial browser test attempt failed with local bind/permission error; user approved rerun, which succeeded. User reports GPU still active and ability to interact with Codex while Inkling continues remaining fixes. This is partial verification on a changing working tree, not final task acceptance.",
-      "User saved proposed hypothesis-driven research coordination workflow locally in Electrow under FutureCoordination. No implementation of that workflow claimed."
+      "User saved proposed hypothesis-driven research coordination workflow locally in Electrow under FutureCoordination. No implementation of that workflow claimed.",
+      "User set 70% remaining five-hour allowance as pain limit and requested stopping Sol trial. Partial regression fixes verified by conductor earlier; final Task 12 acceptance remains unverified. Preserve work for potential cheaper-conductor handover."
     ],
     "confirmed_defects": null,
     "corrective_cycles": null,
@@ -698,6 +699,23 @@
       "five_hour_reset_local": "2026-11-28T03:14:00+01:00",
       "weekly_reset_local": "2026-12-04T14:12:00+01:00",
       "notes": "Working timer shows 3m05s for current turn, not full task duration."
+    },
+    {
+      "stage": "sol_stop_threshold",
+      "source": "user screenshot and decision",
+      "current_turn_elapsed_seconds": 1355,
+      "task_elapsed_seconds": null,
+      "codex_cli_version": "0.171.0",
+      "model_label": "GPT-6.2-Sol",
+      "reasoning_effort": "high",
+      "context_used_tokens_approx": 197000,
+      "context_capacity_tokens_approx": 475000,
+      "context_remaining_percent_displayed": 60,
+      "five_hour_remaining_percent": 70,
+      "weekly_remaining_percent": 95,
+      "five_hour_reset_local": "2026-11-28T03:14:00+01:00",
+      "weekly_reset_local": "2026-12-04T14:12:00+01:00",
+      "notes": "Current turn timer 22m35s, not full task duration. User decided to stop expensive conductor at 70% five-hour allowance remaining. Actual interruption and worker termination not yet confirmed."
     }
   ],
   "conductor_baseline_comparison": {
@@ -710,10 +728,18 @@
   },
   "conductor_baseline_comparison_latest": {
     "baseline_stage": "approximate_pre_delegation_baseline",
-    "comparison_stage": "corrective_review_1_running",
-    "approx_context_growth_tokens": 65100,
-    "five_hour_allowance_remaining_delta_percentage_points": -14,
-    "weekly_allowance_remaining_delta_percentage_points": -2,
-    "notes": "Displayed approximate values, not cumulative tokens or exact task-specific quota use."
+    "comparison_stage": "sol_stop_threshold",
+    "approx_context_growth_tokens": 97100,
+    "five_hour_allowance_remaining_delta_percentage_points": -25,
+    "weekly_allowance_remaining_delta_percentage_points": -4,
+    "notes": "Approximate displayed values, not cumulative token counts or exact task-attributable quota consumption."
+  },
+  "stop_decision": {
+    "reason": "cloud allowance threshold",
+    "five_hour_remaining_percent": 70,
+    "user_requested": true,
+    "conductor_interruption_confirmed": null,
+    "worker_termination_confirmed": null,
+    "task_acceptance": null
   }
 }
