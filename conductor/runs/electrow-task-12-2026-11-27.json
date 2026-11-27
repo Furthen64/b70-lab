@@ -256,7 +256,8 @@
     "observations": [
       "Conductor reported checking rejected edits leaking into undo history and visible wire posts mapping to different engine nodes while worker still active.",
       "User reported difficulty seeing active files, current worker action and latest changes. Git diff watch provided partial visibility.",
-      "At 24m04s, conductor reported first browser run rendered new palette, but divider and several existing controls failed to initialize. Inkling is diagnosing regression. Conductor intends to rerun original workflow alongside new checks after fix. Browser test output shows stack frames at exportCount and main; root cause and correction not established. This is a conductor-reported regression, not independently reproduced here."
+      "At 24m04s, conductor reported first browser run rendered new palette, but divider and several existing controls failed to initialize. Inkling is diagnosing regression. Conductor intends to rerun original workflow alongside new checks after fix. Browser test output shows stack frames at exportCount and main; root cause and correction not established. This is a conductor-reported regression, not independently reproduced here.",
+      "Human interactive testing contributed new diagnostic evidence before first corrective dispatch. Conductor adapted its assignment after user declined initial permission. Worker then resumed according to user report."
     ],
     "confirmed_defects": null,
     "corrective_cycles": null,
@@ -268,7 +269,7 @@
     "corrective_review_requests": [
       {
         "iteration": 1,
-        "status": "awaiting_human_command_approval",
+        "status": "approved_and_running_at_last_report",
         "source": "user screenshot of Codex approval prompt",
         "worker_first_invocation": "Ended during diagnostics without final report, according to conductor.",
         "findings": [
@@ -305,7 +306,19 @@
           "cargo test/build and HTTP/browser tests"
         ],
         "worker_log_path": "Temp/task-12-worker-review-1.jsonl",
-        "notes": "Findings attributed to conductor; not independently reproduced here. Correction not yet dispatched at screenshot time. No completed corrective cycle claimed."
+        "notes": "Findings attributed to conductor; not independently reproduced here. Correction not yet dispatched at screenshot time. No completed corrective cycle claimed. Initial approval was declined and revised assignment subsequently approved; no completed correction or acceptance claimed.",
+        "human_approval_sequence": [
+          "User declined initial command approval.",
+          "User launched Electrow, clicked a newly available component and observed a browser console error.",
+          "User supplied the error to Codex.",
+          "Codex incorporated the error into corrective review 1 and requested approval again.",
+          "User approved revised command; reports GPU active."
+        ],
+        "additional_console_error": {
+          "description": "Error triggered by clicking a new component",
+          "exact_error": null,
+          "notes": "Exact console output and revised prompt not supplied."
+        }
       }
     ]
   },
