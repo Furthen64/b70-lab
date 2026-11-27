@@ -380,6 +380,22 @@
   ],
   "conductor_status_snapshots": [
     {
+      "stage": "approximate_pre_delegation_baseline",
+      "source": "user screenshot and clarification",
+      "task_elapsed_seconds": null,
+      "codex_cli_version": "0.171.0",
+      "model_label": "GPT-6.2-Sol",
+      "reasoning_effort": "high",
+      "context_used_tokens_approx": 99900,
+      "context_capacity_tokens_approx": 475000,
+      "context_remaining_percent_displayed": 81,
+      "five_hour_remaining_percent": 95,
+      "weekly_remaining_percent": 99,
+      "five_hour_reset_local": "2026-11-28T03:14:00+01:00",
+      "weekly_reset_local": "2026-12-04T14:12:00+01:00",
+      "notes": "Same Codex session following creation of task specifications 12–25. User identifies this as probable starting baseline, not guaranteed immediate pre-delegation snapshot."
+    },
+    {
       "source": "user screenshot",
       "task_elapsed_seconds": 1085,
       "five_hour_remaining_percent": 88,
@@ -400,7 +416,15 @@
       "weekly_remaining_percent": 98,
       "five_hour_reset_local": "2026-11-28T03:14:00+01:00",
       "weekly_reset_local": "2026-12-04T14:12:00+01:00",
-      "notes": "Status display values transcribed as shown. Context occupancy is not cumulative token consumption. Quota delta of 3 percentage points between screenshots is not an exact token or cost measure; task-start baseline absent."
+      "notes": "Status display values transcribed as shown. Context occupancy is not cumulative token consumption. Quota delta of 3 percentage points between screenshots is not an exact token or cost measure; task-start baseline absent. A probable pre-delegation baseline has since been supplied; see conductor_baseline_comparison."
     }
-  ]
+  ],
+  "conductor_baseline_comparison": {
+    "baseline_stage": "approximate_pre_delegation_baseline",
+    "comparison_task_elapsed_seconds": 1444,
+    "approx_context_growth_tokens": 52100,
+    "five_hour_allowance_remaining_delta_percentage_points": -10,
+    "weekly_allowance_remaining_delta_percentage_points": -1,
+    "notes": "Differences between displayed approximate baseline and interim screenshot. Occupied context growth is not cumulative tokens processed; quota changes are not exact token or cost measures and cannot be definitively attributed solely to task 12."
+  }
 }
