@@ -2,6 +2,13 @@
 
 Evaluate collaborative software engineering with a supervising cloud coding agent and a local implementation worker on the Intel Arc Pro B70.
 
+## Objectives and next experiment
+
+1. Establish what collaborative orchestration can accomplish: accepted functionality, reliable review, corrections and human participation.
+2. Minimize cloud resource consumption without sacrificing acceptance quality.
+
+The initial Electrow task 12 trial uses GPT-6.2-Sol high as conductor. For the next trial, the user wants to evaluate a potentially less resource-intensive conductor, with Terra as a candidate. Keep Inkling/ArcAngel as the implementation worker and retain independent review and human acceptance gates. Record the actual conductor model and reasoning effort, pre/post status, worker metrics and review outcome. Prefer comparable supervision rules; avoid changing multiple factors at once if comparing conductor models. Task differences and starting context must be accounted for. Lower cost or allowance consumption is a hypothesis, not yet established.
+
 ## Architecture
 
 - Conductor: Codex CLI, task assignment, independent review and corrective feedback.
