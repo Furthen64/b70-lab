@@ -1,0 +1,319 @@
+{
+  "experiment_id": "electrow-task-12-2026-11-27",
+  "date": "2026-11-27",
+  "status": "in_progress_at_last_report",
+  "project": "Electrow",
+  "task": {
+    "path": "Tasks/12-component-palette-and-properties.md",
+    "title": "Component palette and properties",
+    "complexity": {
+      "user_rating": null,
+      "assistant_provisional_rating": 7,
+      "scale_max": 10,
+      "notes": "Subjective estimate based on cross-layer task requirements, not a user rating or measured difficulty."
+    },
+    "scope": [
+      "Expose Rust model metadata to browser",
+      "Add NPN, PNP, NMOS, PMOS and Vactrol placement and all terminal wiring",
+      "Properties editor with engineering units, validation and atomic BJT presets",
+      "SPST state, on-resistance and live toggling",
+      "Manual multi-terminal placement and recovery from rejected edits or stale revisions"
+    ],
+    "acceptance_checks": [
+      "Place and wire PNP, PMOS and four-post Vactrol; verify engine terminal identity",
+      "Edit diode emission and Vactrol time constant; invalid input feedback, save/reload, preset as one undo action",
+      "Toggle SPST during simulation; verify current changes"
+    ]
+  },
+  "architecture": {
+    "conductor": {
+      "client": "Codex CLI",
+      "intended_model": "GPT Astra",
+      "observed_model_label": "GPT-6.2-Sol high",
+      "model_label_source": "User screenshot",
+      "cloud_input_tokens": null,
+      "cloud_output_tokens": null,
+      "cloud_cost": null
+    },
+    "worker": {
+      "client": "OpenCode CLI",
+      "provider_model": "117_local/arcangel",
+      "engine": "arcangel_fayt",
+      "model": "Inkling 2 Mini",
+      "gpu": "Intel Arc Pro B70 32 GB",
+      "settings_id": null,
+      "notes": "Exact build, active launcher and context capacity for this trial not supplied."
+    },
+    "transport": "opencode run --format json --thinking; resume via --session; no MCP",
+    "workflow": "One implementation worker; conductor independently reviews and delegates corrections; no source edits by conductor intended; human interactive verification; no commit/push intended.",
+    "worker_session_id": null
+  },
+  "measurements": {
+    "source": "user-provided timestamped backend excerpt",
+    "server_instance_id": "c03320d46354",
+    "requests": [
+      {
+        "request_id": 45,
+        "started_at": null,
+        "prefill_completed_at": null,
+        "completed_at": "2026-11-27T23:09:54.351+01:00",
+        "prompt_tokens": 106748,
+        "new_tokens": 7,
+        "prefill_seconds": 0.42,
+        "generated_tokens": 659,
+        "decode_tps": 46.27,
+        "request_elapsed_seconds": 14.662,
+        "finish_reason": "tool_calls"
+      },
+      {
+        "request_id": 46,
+        "started_at": "2026-11-27T23:09:54.499+01:00",
+        "prefill_completed_at": "2026-11-27T23:09:55.124+01:00",
+        "completed_at": "2026-11-27T23:10:32.037+01:00",
+        "prompt_tokens": 107516,
+        "new_tokens": 110,
+        "prefill_seconds": 0.55,
+        "generated_tokens": 1700,
+        "decode_tps": 46.05,
+        "request_elapsed_seconds": 37.462,
+        "finish_reason": "tool_calls"
+      },
+      {
+        "request_id": 47,
+        "started_at": "2026-11-27T23:10:32.196+01:00",
+        "prefill_completed_at": "2026-11-27T23:10:32.696+01:00",
+        "completed_at": "2026-11-27T23:11:09.815+01:00",
+        "prompt_tokens": 109222,
+        "new_tokens": 7,
+        "prefill_seconds": 0.42,
+        "generated_tokens": 1704,
+        "decode_tps": 45.91,
+        "request_elapsed_seconds": 37.536,
+        "finish_reason": "tool_calls"
+      },
+      {
+        "request_id": 48,
+        "started_at": "2026-11-27T23:11:09.976+01:00",
+        "prefill_completed_at": "2026-11-27T23:11:10.652+01:00",
+        "completed_at": "2026-11-27T23:11:21.684+01:00",
+        "prompt_tokens": 111098,
+        "new_tokens": 173,
+        "prefill_seconds": 0.6,
+        "generated_tokens": 505,
+        "decode_tps": 45.78,
+        "request_elapsed_seconds": 11.627,
+        "finish_reason": "tool_calls"
+      },
+      {
+        "request_id": 49,
+        "started_at": "2026-11-27T23:11:21.905+01:00",
+        "prefill_completed_at": "2026-11-27T23:11:22.415+01:00",
+        "completed_at": "2026-11-27T23:11:27.639+01:00",
+        "prompt_tokens": 111611,
+        "new_tokens": 9,
+        "prefill_seconds": 0.43,
+        "generated_tokens": 240,
+        "decode_tps": 45.93,
+        "request_elapsed_seconds": 5.654,
+        "finish_reason": "tool_calls"
+      },
+      {
+        "request_id": 50,
+        "started_at": "2026-11-27T23:11:27.942+01:00",
+        "prefill_completed_at": "2026-11-27T23:11:28.459+01:00",
+        "completed_at": "2026-11-27T23:11:44.064+01:00",
+        "prompt_tokens": 111864,
+        "new_tokens": 14,
+        "prefill_seconds": 0.44,
+        "generated_tokens": 713,
+        "decode_tps": 45.69,
+        "request_elapsed_seconds": 16.042,
+        "finish_reason": "tool_calls"
+      },
+      {
+        "request_id": 51,
+        "started_at": "2026-11-27T23:11:44.223+01:00",
+        "prefill_completed_at": "2026-11-27T23:11:44.909+01:00",
+        "completed_at": "2026-11-27T23:14:23.423+01:00",
+        "prompt_tokens": 112758,
+        "new_tokens": 182,
+        "prefill_seconds": 0.61,
+        "generated_tokens": 7165,
+        "decode_tps": 45.2,
+        "request_elapsed_seconds": 159.119,
+        "finish_reason": "tool_calls"
+      },
+      {
+        "request_id": 52,
+        "started_at": "2026-11-27T23:14:23.682+01:00",
+        "prefill_completed_at": "2026-11-27T23:14:24.203+01:00",
+        "completed_at": "2026-11-27T23:14:46.070+01:00",
+        "prompt_tokens": 119929,
+        "new_tokens": 7,
+        "prefill_seconds": 0.44,
+        "generated_tokens": 983,
+        "decode_tps": 44.95,
+        "request_elapsed_seconds": 22.302,
+        "finish_reason": "tool_calls"
+      },
+      {
+        "request_id": 53,
+        "started_at": "2026-11-27T23:14:46.269+01:00",
+        "prefill_completed_at": "2026-11-27T23:14:47.020+01:00",
+        "completed_at": "2026-11-27T23:15:06.432+01:00",
+        "prompt_tokens": 121127,
+        "new_tokens": 216,
+        "prefill_seconds": 0.66,
+        "generated_tokens": 871,
+        "decode_tps": 44.87,
+        "request_elapsed_seconds": 20.077,
+        "finish_reason": "tool_calls"
+      },
+      {
+        "request_id": 54,
+        "started_at": "2026-11-27T23:15:06.644+01:00",
+        "prefill_completed_at": "2026-11-27T23:15:07.181+01:00",
+        "completed_at": "2026-11-27T23:15:30.039+01:00",
+        "prompt_tokens": 122004,
+        "new_tokens": 7,
+        "prefill_seconds": 0.45,
+        "generated_tokens": 1023,
+        "decode_tps": 44.76,
+        "request_elapsed_seconds": 23.308,
+        "finish_reason": "tool_calls"
+      },
+      {
+        "request_id": 55,
+        "started_at": "2026-11-27T23:15:30.312+01:00",
+        "prefill_completed_at": "2026-11-27T23:15:30.854+01:00",
+        "completed_at": "2026-11-27T23:15:41.929+01:00",
+        "prompt_tokens": 123033,
+        "new_tokens": 7,
+        "prefill_seconds": 0.45,
+        "generated_tokens": 495,
+        "decode_tps": 44.7,
+        "request_elapsed_seconds": 11.529,
+        "finish_reason": "tool_calls"
+      },
+      {
+        "request_id": 56,
+        "started_at": "2026-11-27T23:15:42.098+01:00",
+        "prefill_completed_at": "2026-11-27T23:15:42.736+01:00",
+        "completed_at": "2026-11-27T23:16:32.165+01:00",
+        "prompt_tokens": 123613,
+        "new_tokens": 86,
+        "prefill_seconds": 0.55,
+        "generated_tokens": 2191,
+        "decode_tps": 44.33,
+        "request_elapsed_seconds": 49.979,
+        "finish_reason": "tool_calls"
+      },
+      {
+        "request_id": 57,
+        "started_at": "2026-11-27T23:16:32.324+01:00",
+        "prefill_completed_at": "2026-11-27T23:16:32.960+01:00",
+        "completed_at": "2026-11-27T23:17:30.319+01:00",
+        "prompt_tokens": 125883,
+        "new_tokens": 80,
+        "prefill_seconds": 0.55,
+        "generated_tokens": 2523,
+        "decode_tps": 43.99,
+        "request_elapsed_seconds": 57.904,
+        "finish_reason": "tool_calls"
+      }
+    ],
+    "pending_request": {
+      "request_id": 58,
+      "started_at": "2026-11-27T23:17:30.505+01:00",
+      "prefill_completed_at": "2026-11-27T23:17:31.047+01:00",
+      "prompt_tokens": 128412,
+      "new_tokens": 7,
+      "prefill_seconds": 0.45,
+      "generated_tokens": null,
+      "decode_tps": null,
+      "finish_reason": null
+    },
+    "summary": {
+      "completed_requests": 13,
+      "generated_tokens": 20772,
+      "estimated_decode_seconds": 460.6423497509028,
+      "weighted_decode_tps": 45.09355253860762,
+      "prefill_seconds": 6.569999999999999,
+      "request_elapsed_seconds": 467.20099999999996,
+      "cumulative_prompt_tokens": 1506406,
+      "new_prompt_tokens": 905,
+      "inferred_reused_tokens": 1505501,
+      "inferred_reused_fraction": 0.999399232345065,
+      "min_decode_tps": 43.99,
+      "max_decode_tps": 46.27,
+      "latest_completed_decode_tps": 43.99,
+      "latest_reported_prompt_tokens": 128412,
+      "tool_call_finishes": 13,
+      "notes": "Requests 45–57 only. Requests 1–44 absent; request 58 incomplete. Decode time estimated from rounded rates; cache reuse inferred from prompt minus new. No complete-session token or cost totals."
+    }
+  },
+  "working_tree_snapshot": {
+    "timestamp": "2026-11-27T23:19:10+01:00",
+    "command": "git diff --stat HEAD",
+    "tracked_files_changed": 10,
+    "insertions": 1446,
+    "deletions": 222,
+    "files": [
+      {
+        "path": "Docs/interface-schema.json",
+        "changed_lines": 574
+      },
+      {
+        "path": "engine/src/lib.rs",
+        "changed_lines": 105
+      },
+      {
+        "path": "engine/src/models.rs",
+        "changed_lines": 95
+      },
+      {
+        "path": "web/app.js",
+        "changed_lines": 74
+      },
+      {
+        "path": "web/index.html",
+        "changed_lines": 56
+      },
+      {
+        "path": "web/js/circuit.js",
+        "changed_lines": 114
+      },
+      {
+        "path": "web/js/editor.js",
+        "changed_lines": 380
+      },
+      {
+        "path": "web/js/renderer.js",
+        "changed_lines": 143
+      },
+      {
+        "path": "web/js/symbols.js",
+        "changed_lines": 65
+      },
+      {
+        "path": "web/style.css",
+        "changed_lines": 62
+      }
+    ],
+    "notes": "Snapshot relative to HEAD; may include pre-existing changes and excludes untracked files. File-by-file counts transcribed; aggregate as reported."
+  },
+  "review": {
+    "observations": [
+      "Conductor reported checking rejected edits leaking into undo history and visible wire posts mapping to different engine nodes while worker still active.",
+      "User reported difficulty seeing active files, current worker action and latest changes. Git diff watch provided partial visibility."
+    ],
+    "confirmed_defects": null,
+    "corrective_cycles": null,
+    "acceptance_results": null,
+    "final_acceptance": null,
+    "human_test_result": null,
+    "compaction_count": null,
+    "elapsed_full_session_seconds": null
+  },
+  "notes": "No private prompts or source code stored. Review findings and implementation quality pending. This is an orchestration experiment, not a controlled model comparison."
+}
