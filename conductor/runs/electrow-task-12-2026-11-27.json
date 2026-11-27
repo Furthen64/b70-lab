@@ -255,7 +255,8 @@
   "review": {
     "observations": [
       "Conductor reported checking rejected edits leaking into undo history and visible wire posts mapping to different engine nodes while worker still active.",
-      "User reported difficulty seeing active files, current worker action and latest changes. Git diff watch provided partial visibility."
+      "User reported difficulty seeing active files, current worker action and latest changes. Git diff watch provided partial visibility.",
+      "At 24m04s, conductor reported first browser run rendered new palette, but divider and several existing controls failed to initialize. Inkling is diagnosing regression. Conductor intends to rerun original workflow alongside new checks after fix. Browser test output shows stack frames at exportCount and main; root cause and correction not established. This is a conductor-reported regression, not independently reproduced here."
     ],
     "confirmed_defects": null,
     "corrective_cycles": null,
@@ -375,6 +376,31 @@
         }
       ],
       "notes": "Two additional tracked test files visible compared with preceding snapshot. Net increase 180 insertions and 5 deletions in reported aggregate. Diff relative to HEAD; authorship, test execution and pass status unverified."
+    }
+  ],
+  "conductor_status_snapshots": [
+    {
+      "source": "user screenshot",
+      "task_elapsed_seconds": 1085,
+      "five_hour_remaining_percent": 88,
+      "weekly_remaining_percent": 98,
+      "context_used_tokens": null,
+      "notes": "Earlier screenshot at 18m05s; not a task-start baseline."
+    },
+    {
+      "source": "user screenshot",
+      "task_elapsed_seconds": 1444,
+      "codex_cli_version": "0.171.0",
+      "model_label": "GPT-6.2-Sol",
+      "reasoning_effort": "high",
+      "context_used_tokens_approx": 152000,
+      "context_capacity_tokens_approx": 475000,
+      "context_remaining_percent_displayed": 70,
+      "five_hour_remaining_percent": 85,
+      "weekly_remaining_percent": 98,
+      "five_hour_reset_local": "2026-11-28T03:14:00+01:00",
+      "weekly_reset_local": "2026-12-04T14:12:00+01:00",
+      "notes": "Status display values transcribed as shown. Context occupancy is not cumulative token consumption. Quota delta of 3 percentage points between screenshots is not an exact token or cost measure; task-start baseline absent."
     }
   ]
 }
