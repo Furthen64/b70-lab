@@ -7,10 +7,10 @@
     "path": "Tasks/12-component-palette-and-properties.md",
     "title": "Component palette and properties",
     "complexity": {
-      "user_rating": null,
+      "user_rating": 7,
       "assistant_provisional_rating": 7,
       "scale_max": 10,
-      "notes": "Subjective estimate based on cross-layer task requirements, not a user rating or measured difficulty."
+      "notes": "User agreed with provisional 7/10 estimate on 2026-11-27; subjective rating, not measured difficulty."
     },
     "scope": [
       "Expose Rust model metadata to browser",
@@ -30,7 +30,7 @@
       "client": "Codex CLI",
       "intended_model": "GPT Astra",
       "observed_model_label": "GPT-6.2-Sol high",
-      "model_label_source": "User screenshot",
+      "model_label_source": "User confirmed GPT-6.2-Sol high, matching screenshot.",
       "cloud_input_tokens": null,
       "cloud_output_tokens": null,
       "cloud_cost": null
@@ -252,56 +252,6 @@
       "notes": "Requests 45–57 only. Requests 1–44 absent; request 58 incomplete. Decode time estimated from rounded rates; cache reuse inferred from prompt minus new. No complete-session token or cost totals."
     }
   },
-  "working_tree_snapshot": {
-    "timestamp": "2026-11-27T23:19:10+01:00",
-    "command": "git diff --stat HEAD",
-    "tracked_files_changed": 10,
-    "insertions": 1446,
-    "deletions": 222,
-    "files": [
-      {
-        "path": "Docs/interface-schema.json",
-        "changed_lines": 574
-      },
-      {
-        "path": "engine/src/lib.rs",
-        "changed_lines": 105
-      },
-      {
-        "path": "engine/src/models.rs",
-        "changed_lines": 95
-      },
-      {
-        "path": "web/app.js",
-        "changed_lines": 74
-      },
-      {
-        "path": "web/index.html",
-        "changed_lines": 56
-      },
-      {
-        "path": "web/js/circuit.js",
-        "changed_lines": 114
-      },
-      {
-        "path": "web/js/editor.js",
-        "changed_lines": 380
-      },
-      {
-        "path": "web/js/renderer.js",
-        "changed_lines": 143
-      },
-      {
-        "path": "web/js/symbols.js",
-        "changed_lines": 65
-      },
-      {
-        "path": "web/style.css",
-        "changed_lines": 62
-      }
-    ],
-    "notes": "Snapshot relative to HEAD; may include pre-existing changes and excludes untracked files. File-by-file counts transcribed; aggregate as reported."
-  },
   "review": {
     "observations": [
       "Conductor reported checking rejected edits leaking into undo history and visible wire posts mapping to different engine nodes while worker still active.",
@@ -315,5 +265,116 @@
     "compaction_count": null,
     "elapsed_full_session_seconds": null
   },
-  "notes": "No private prompts or source code stored. Review findings and implementation quality pending. This is an orchestration experiment, not a controlled model comparison."
+  "notes": "No private prompts or source code stored. Review findings and implementation quality pending. This is an orchestration experiment, not a controlled model comparison.",
+  "objective": "Evaluate whether cloud conductor can supervise local implementation effectively while limiting cloud token consumption; savings not yet measured.",
+  "working_tree_snapshots": [
+    {
+      "timestamp": "2026-11-27T23:19:10+01:00",
+      "command": "git diff --stat HEAD",
+      "tracked_files_changed": 10,
+      "insertions": 1446,
+      "deletions": 222,
+      "files": [
+        {
+          "path": "Docs/interface-schema.json",
+          "changed_lines": 574
+        },
+        {
+          "path": "engine/src/lib.rs",
+          "changed_lines": 105
+        },
+        {
+          "path": "engine/src/models.rs",
+          "changed_lines": 95
+        },
+        {
+          "path": "web/app.js",
+          "changed_lines": 74
+        },
+        {
+          "path": "web/index.html",
+          "changed_lines": 56
+        },
+        {
+          "path": "web/js/circuit.js",
+          "changed_lines": 114
+        },
+        {
+          "path": "web/js/editor.js",
+          "changed_lines": 380
+        },
+        {
+          "path": "web/js/renderer.js",
+          "changed_lines": 143
+        },
+        {
+          "path": "web/js/symbols.js",
+          "changed_lines": 65
+        },
+        {
+          "path": "web/style.css",
+          "changed_lines": 62
+        }
+      ],
+      "notes": "Snapshot relative to HEAD; may include pre-existing changes and excludes untracked files. File-by-file counts transcribed; aggregate as reported."
+    },
+    {
+      "timestamp": "2026-11-27T23:22:54+01:00",
+      "command": "git diff --stat HEAD",
+      "tracked_files_changed": 12,
+      "insertions": 1626,
+      "deletions": 227,
+      "files": [
+        {
+          "path": "Docs/interface-schema.json",
+          "changed_lines": 574
+        },
+        {
+          "path": "engine/src/lib.rs",
+          "changed_lines": 105
+        },
+        {
+          "path": "engine/src/models.rs",
+          "changed_lines": 95
+        },
+        {
+          "path": "tests/browser_ui.cjs",
+          "changed_lines": 110
+        },
+        {
+          "path": "tests/test_api.py",
+          "changed_lines": 75
+        },
+        {
+          "path": "web/app.js",
+          "changed_lines": 74
+        },
+        {
+          "path": "web/index.html",
+          "changed_lines": 56
+        },
+        {
+          "path": "web/js/circuit.js",
+          "changed_lines": 114
+        },
+        {
+          "path": "web/js/editor.js",
+          "changed_lines": 380
+        },
+        {
+          "path": "web/js/renderer.js",
+          "changed_lines": 143
+        },
+        {
+          "path": "web/js/symbols.js",
+          "changed_lines": 65
+        },
+        {
+          "path": "web/style.css",
+          "changed_lines": 62
+        }
+      ],
+      "notes": "Two additional tracked test files visible compared with preceding snapshot. Net increase 180 insertions and 5 deletions in reported aggregate. Diff relative to HEAD; authorship, test execution and pass status unverified."
+    }
+  ]
 }
