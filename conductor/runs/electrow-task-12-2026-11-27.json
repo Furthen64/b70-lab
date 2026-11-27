@@ -264,7 +264,50 @@
     "final_acceptance": null,
     "human_test_result": null,
     "compaction_count": null,
-    "elapsed_full_session_seconds": null
+    "elapsed_full_session_seconds": null,
+    "corrective_review_requests": [
+      {
+        "iteration": 1,
+        "status": "awaiting_human_command_approval",
+        "source": "user screenshot of Codex approval prompt",
+        "worker_first_invocation": "Ended during diagnostics without final report, according to conductor.",
+        "findings": [
+          {
+            "area": "startup",
+            "description": "editor constructor assigns this.status=null, shadowing status(); setTool throws and existing divider/run/export controls fail to initialize. Conductor reports reproduction in original browser harness."
+          },
+          {
+            "area": "rendering",
+            "description": "BJT/MOSFET renderer calls local string label as a function; conductor reports direct reproduction."
+          },
+          {
+            "area": "terminal identity",
+            "description": "Renderer hardcodes MOSFET gate/drain/source while Rust defines gate/source/drain. Requested registry-driven terminal metadata, distinct post geometry and consistent snapping."
+          },
+          {
+            "area": "engineering units",
+            "description": "Parser accepts trailing garbage and wrong dimensions, including 2.5 kiwi -> 2500; requested full-string dimensional validation and field error without state mutation."
+          },
+          {
+            "area": "synchronization",
+            "description": "Rejected edits and revert can affect history; stale reload and overlapping edits risk state divergence, partially acknowledged placement can duplicate additions. Requested acknowledgement-aware reconciliation and browser regression tests."
+          },
+          {
+            "area": "switch interaction",
+            "description": "Context menu targets selected rather than clicked switch. Requested current-response verification during running simulation."
+          }
+        ],
+        "verification_requested": [
+          "Real canvas pointer placement and all terminal node IDs for PNP/PMOS/Vactrol",
+          "Properties validation, persistence, atomic preset undo",
+          "SPST toggling and measured current",
+          "Existing divider/demo/file/Falstad checks",
+          "cargo test/build and HTTP/browser tests"
+        ],
+        "worker_log_path": "Temp/task-12-worker-review-1.jsonl",
+        "notes": "Findings attributed to conductor; not independently reproduced here. Correction not yet dispatched at screenshot time. No completed corrective cycle claimed."
+      }
+    ]
   },
   "notes": "No private prompts or source code stored. Review findings and implementation quality pending. This is an orchestration experiment, not a controlled model comparison.",
   "objective": "Evaluate whether cloud conductor can supervise local implementation effectively while limiting cloud token consumption; savings not yet measured.",
