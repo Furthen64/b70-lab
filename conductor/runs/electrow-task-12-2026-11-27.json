@@ -576,7 +576,8 @@
       "Concurrent conductor verification during corrective review 1: Codex reports worker removed shadowing assignment. Independent check constructed editor and drew all three multi-terminal symbols without throwing. Subsequent Chrome check loaded editor without uncaught JavaScript errors and divider midpoint reached 5 V. Initial browser test attempt failed with local bind/permission error; user approved rerun, which succeeded. User reports GPU still active and ability to interact with Codex while Inkling continues remaining fixes. This is partial verification on a changing working tree, not final task acceptance.",
       "User saved proposed hypothesis-driven research coordination workflow locally in Electrow under FutureCoordination. No implementation of that workflow claimed.",
       "User set 70% remaining five-hour allowance as pain limit and requested stopping Sol trial. Partial regression fixes verified by conductor earlier; final Task 12 acceptance remains unverified. Preserve work for potential cheaper-conductor handover.",
-      "User stopped Codex at quota threshold and deliberately allowed Inkling to continue the existing corrective work. Exact interruption timestamp unavailable; cannot classify every request in latest excerpt as post-interruption. User requests visibility into worker activity. Earlier corrective command used tee to Temp/task-12-worker-review-1.jsonl; actual revised command log path and continued log writing not yet verified."
+      "User stopped Codex at quota threshold and deliberately allowed Inkling to continue the existing corrective work. Exact interruption timestamp unavailable; cannot classify every request in latest excerpt as post-interruption. User requests visibility into worker activity. Earlier corrective command used tee to Temp/task-12-worker-review-1.jsonl; actual revised command log path and continued log writing not yet verified.",
+      "User supplied live OpenCode JSON events matching backend requests at 223153, 223738 and 226113 input positions. Worker added wire snapping test after reporting 26/26, then observed 26/27 with no wire and instrumented wireStart. Raw event visibility demonstrated; exact log path not independently confirmed. No private reasoning transcript stored."
     ],
     "confirmed_defects": null,
     "corrective_cycles": null,
@@ -649,6 +650,44 @@
           "concurrent_worker_activity": "User reports GPU working while conductor tests",
           "initial_test_blocker": "Local socket bind/permission error; user-approved rerun succeeded",
           "full_acceptance": null
+        },
+        "worker_browser_verification": {
+          "source": "User-supplied OpenCode JSON events",
+          "passed": 26,
+          "total": 27,
+          "failed": "wire snaps to post and reuses actual node id — no wire",
+          "diagnostics": {
+            "base_screen": {
+              "x": 573.109375,
+              "y": 170
+            },
+            "wire_start": null,
+            "document_elements": 1
+          },
+          "passing_examples": [
+            "New palette and PNP/PMOS/Vactrol canvas placement",
+            "Multi-terminal assignment counts",
+            "Divider midpoint 5 V",
+            "Simulation time advances and scope traces",
+            "Undo/redo and save/reload",
+            "Emission parameter edit and invalid value feedback",
+            "BJT preset one undo action",
+            "Stale session refresh/retry",
+            "No page exceptions"
+          ],
+          "limitations": [
+            "Worker-produced tests, not final independent conductor acceptance.",
+            "Wire placement remains unverified; reported failure could be in harness or application.",
+            "Test command piped through tail without visible pipefail, so recorded shell exit 0 does not establish all checks passed.",
+            "Full all-pin terminal identity, Vactrol time constant, and running SPST current acceptance not established by this excerpt."
+          ],
+          "worker_reported_other_tests": "Reasoning claims cargo test, smoke and test_api completed; actual output not supplied.",
+          "latest_step": {
+            "input_tokens": 226113,
+            "output_tokens": 1294,
+            "total_tokens": 227407,
+            "finish_reason": "tool-calls"
+          }
         }
       }
     ]
